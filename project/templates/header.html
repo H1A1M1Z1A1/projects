@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  {% load static %}
+
+
+
+  <!-- {% load static %}
+<!DOCTYPE html>
+<html>
+<body>
+
+<img src="{% static 'pineapple.jpg' %}">
+
+</body>
+</html> -->
+
+<link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top border-circle" style="background-color: rgb(54, 51, 51); color: rgb(255, 255, 255);" >
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" >
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+
+      <a class="navbar-brand" href="/" style="background-image: url('{% static 'logo7.jpg' %}');
+background-size: 56px;
+background-repeat: no-repeat;
+padding: 26px;
+background-repeat: no-repeat;
+border-radius: 57%;
+border: 2px solid #4d4c4c;
+      
+      " ></a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" >
+      <ul class="nav navbar-nav navbar-right" >
+        <li ><a href="/#about">ABOUT</a></li>
+        <li><a href="/#services">SERVICES</a></li>
+        <!-- <li><a href="/#portfolio">PORTFOLIO</a></li> -->
+        <!-- <li><a href="/#pricing">PRICING</a></li> -->
+        <li><a href="/#contact">CONTACT</a></li>
+        <li>
+          <a href="/project/language" value="#">LANGUAGE</a>
+          <!-- <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown link
+            </a>
+          
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div> -->
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br>
+<div
+    class="p-5 text-center bg-image"
+    style="
+      background-image: url('{% static 'walp2.jpg' %}');
+      height: 800px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      
+    "
+  >
+  <!-- background-size: contain; -->
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);",>
+      </div>
+    </div>
+  </div>
+  <!-- Background image -->
+<!-- </header> -->

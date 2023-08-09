@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  {% load static %}
+
+<link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top border-circle" style="background-color: rgb(54, 51, 51); color: rgb(255, 255, 255);" >
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" >
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/" style="background-image: url('{% static 'logo7.jpg' %}');
+background-size: 56px;
+background-repeat: no-repeat;
+padding: 26px;
+background-repeat: no-repeat;
+border-radius: 57%;
+border: 2px solid #4d4c4c;
+      
+      " ></a>
+
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" >
+      <ul class="nav navbar-nav navbar-right" >
+        <li ><a href="/project/about">ABOUT</a></li>
+        <li><a href="/project/about">SERVICES</a></li>
+        <!-- <li><a href="/#portfolio">PORTFOLIO</a></li> -->
+        <!-- <li><a href="/#pricing">PRICING</a></li> -->
+        <li><a href="/#contact">CONTACT</a></li>
+        <li>
+          <a href="/project/language" >LANGUAGE</a>
+
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br>
+
+
+<section class="about aos-init aos-animate" data-aos="fade-up">
+  <div class="container">
+    <!-- <h3>Translation Languages</h3 -->
+    <h3 style="color: black;">Translation and Interpretation Languages</h3>
+
+    <p>
+      Multi Language Data Solution provides Translation and interpretation services in all Indian languages and major languages of the world. Our team is well equipped with the technical nuances of right to left, complex, CJK languages, and other Latin and non-Latin languages. Currently, we are providing our services in the following languages:
+    </p>
+    <div class="row">
+      <div class="col-md-6">
+        <h3 style="color: black;"><strong>Indian</strong></h3>
+        <ul>
+          <li>Tamil</li>
+          <li>Marathi</li>
+          <li>Assamese</li>
+          <li>Bengali (Bangla)</li>
+          <li>Gujarati</li>
+          <li>Hindi</li>
+          <li>Kannada</li>
+          <li>Malayalam</li>          
+          <li>Punjabi</li>
+          <li>Telugu</li>
+          <li>Urdu</li>
+          <li>Oriya</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h3 style="color: black;"><strong>Foreign</strong></h3>
+        
+        <ul>
+          <li>Arabic</li>
+          <li>French</li>
+          <li>Turkish</li>
+          <!-- Add more foreign languages here -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br><br><br>
+
+{% include "contact.html" %}
+
+
+<script>
+  $(document).ready(function(){
+    // Add smooth scrolling to all links in navbar + footer link
+    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+  
+        // Store hash
+        var hash = this.hash;
+  
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function(){
+     
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+    
+    $(window).scroll(function() {
+      $(".slideanim").each(function(){
+        var pos = $(this).offset().top;
+  
+        var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("slide");
+          }
+      });
+    });
+  })
+  </script>
+  </body>
+  </html>
+  

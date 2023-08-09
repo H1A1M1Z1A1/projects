@@ -1,0 +1,63 @@
+<div id="contact" class="container-fluid bg-grey" style="background-color: rgb(69 69 69);">
+    <h2 class="text-center">CONTACT</h2>
+    <div class="row">
+      <div class="col-sm-5" style="color: white;">
+        <p>Contact us and we'll get back to you within 24 hours.</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> Lucknow, India</p>
+        <p><span class="glyphicon glyphicon-phone"></span>+91 9335275342</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> company@email.com</p>
+      </div>
+    <form action="contact" method="post">
+      {% csrf_token %}
+      <div class="col-sm-7 slideanim">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+  <!-- Add this script just before the closing body tag </body> -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get the submit button element
+    var submitBtn = document.querySelector('button[type="submit"]');
+
+    // Add a click event listener to the submit button
+    submitBtn.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+
+      // Show the "Thank you" popup
+      var popup = document.createElement('div');
+      popup.innerHTML = 'Thank you for contacting us';
+      popup.style.position = 'fixed';
+      popup.style.top = '50%';
+      popup.style.left = '50%';
+      popup.style.transform = 'translate(-50%, -50%)';
+      popup.style.padding = '15px';
+      popup.style.backgroundColor = 'green';
+      popup.style.color = 'white';
+      popup.style.borderRadius = '5px';
+      popup.style.zIndex = '9999';
+      document.body.appendChild(popup);
+
+      // After 2 seconds, remove the popup
+      setTimeout(function() {
+        popup.parentNode.removeChild(popup);
+      }, 2000);
+    });
+  });
+</script>
+
+
